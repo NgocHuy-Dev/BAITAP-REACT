@@ -1,19 +1,38 @@
-#glasses-modal {
-    position: relative;
+.glasses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#glasses-modal .overlay {
+.glasses-modal {
+    position: relative;
+    margin: 72px;
+}
+
+.glasses-modal .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
     width: 100%;
-    z-index: 99;
-    background-color: aqua;
+    height: 100%;
+    position: relative;
 }
 
-.overlay-text {
-    width: 100%;
+.glasses-modal .overlay .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #c75a166b;
+}
+
+.glasses-modal .overlay .overlay-img {
+    position: absolute;
+    top: -295px;
+    left: 3px;
+    right: 50%;
+    transform: translateX(50%);
 }

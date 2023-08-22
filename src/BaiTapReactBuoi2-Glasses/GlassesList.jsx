@@ -2,7 +2,7 @@ import React from "react";
 
 export default function GlassesList() {
   return (
-    <div className="container bg-white mt-4 mb-5">
+    <div className="container bg-white mb-5">
       <div className="row g-4 place-items-center ">
         <div className="col-md-2 item">
           <img
