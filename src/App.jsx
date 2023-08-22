@@ -1,7 +1,7 @@
-import BaiTapThucHanhLayout from "./BaiTapLayoutComponent/BaiTapThucHanhLayout";
+import GlassesApp from "./BaiTapReactBuoi2-Glasses/GlassesApp";
 
 function App() {
-  return <BaiTapThucHanhLayout />;
+  return <GlassesApp />;
 }
 
 export default App;
