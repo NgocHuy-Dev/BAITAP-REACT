@@ -1,27 +1,19 @@
 import React, { useState } from "react";
 import ModalOverlay from "./ModalOverlay";
 
-export default function GlassesModal({ products }) {
-  const handleGetGlasses = (product) => {
-    console.log(product);
-  };
-
+export default function GlassesModal({ product }) {
   return (
     <div className="container glasses">
       <div className="glasses-modal">
-        {products.map((product) => {
-          return (
-            <div key={product.id}>
-              <img
-                src="./glassesImage/model.jpg"
-                alt="modal"
-                width="100%"
-                height=""
-              />
-              <ModalOverlay product={product} onGetGlasses={handleGetGlasses} />
-            </div>
-          );
-        })}
+        <div>
+          <img
+            src="./glassesImage/model.jpg"
+            alt="modal"
+            width="100%"
+            height=""
+          />
+          <ModalOverlay product={product} />
+        </div>
       </div>
 
       <div className="glasses-modal">

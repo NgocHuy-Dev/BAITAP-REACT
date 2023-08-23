@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .glasses-modal {
@@ -35,4 +36,8 @@
     left: -7px;
     right: 50%;
     transform: translateX(50%);
+}
+
+.item {
+    cursor: pointer;
 }
