@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GlassesModal from "./GlassesModal";
 import GlassesList from "./GlassesList";
 import GlassesHeader from "./GlassesHeader";
@@ -6,15 +6,16 @@ import "./GlassesStyle.css";
 import data from "./dataGlasses.json";
 
 export default function GlassesApp() {
-  // const [info, setInfo] = useState("");
+  const [selectProduct, setSelectProduct] = useState("");
 
-  const handleChangeGlasses = (id) => {
-    return data.filter(function (glasses) {
-      return (glasses.id = id);
+  const handleChangeProduct = (productID) => {
+    // lọc ra sản phẩm có ID tương ứng
+    console.log(productID);
+    let selectedProduct = data.filter(function (product) {
+      return product.id === productID;
     });
-  };
-  const handleGetGlasses = (product) => {
-    console.log(product);
+    setSelectProduct(selectedProduct);
+    console.log(selectedProduct);
   };
 
   return (
@@ -22,8 +23,8 @@ export default function GlassesApp() {
       <section className="main">
         <GlassesHeader />
         <div className="container">
-          <GlassesModal products={data} />
-          <GlassesList onChangeGlasses={handleChangeGlasses} />
+          <GlassesModal product={selectProduct} />
+          <GlassesList onChangeProduct={handleChangeProduct} />
         </div>
       </section>
     </>
