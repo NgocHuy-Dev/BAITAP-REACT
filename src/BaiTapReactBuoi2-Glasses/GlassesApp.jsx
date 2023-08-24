@@ -10,14 +10,7 @@ export default function GlassesApp() {
   const [selectProduct, setSelectProduct] = useState(data[0]);
 
   const handleChangeProduct = (productID) => {
-    // lọc ra sản phẩm có ID tương ứng
-    // let glasses = data.filter(function (product) {
-    //   return product.id === productID;
-    // });
-
-    // setSelectProduct(glasses);
-    // console.log("hehehe", glasses);
-    // setSelectProduct(productID);
+    // Tìm Index của glasses có id tương ứng
     let glassesIndex = data.findIndex((data) => data.id === productID);
     setSelectProduct(data[glassesIndex]);
   };
